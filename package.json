@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "jsonbackend" : "npx json-server --watch -p 9001 db.json"
+    "jsonbackend" : "npx json-server --watch -p 9001 db.json",
+    "start" : "npm run serve"
   },
   "dependencies": {
     "axios": "^1.2.0",
