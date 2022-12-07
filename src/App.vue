@@ -38,10 +38,9 @@ import axios from 'axios';
         if(!stateCodeVal){
           this.stateCode = stateCodeVal;
         }
-
-        const res =   await axios.get('https://outstanding-pear-bullfrog.cyclic.app/?state='+this.stateCode, {
+        const res =   await axios.get('https://hospital-details-by-us-state-tvt.cyclic.app/hospitalDetails?state='+this.stateCode, {
           mode:'no-cors',
-          referrerPolicy : 'origin',
+          referrerPolicy: 'origin'
         });
         const response =  res.data;
         if(this.stateCode != 'CT') {
@@ -99,6 +98,7 @@ import axios from 'axios';
     margin-top: 10px;
     display: inline-flex;
     border-radius: 10px;
+    margin-bottom: 40px;
 }
 
 #errorMessage {
@@ -160,6 +160,10 @@ input {
         width: 90vw;
         margin: 0px;
         padding: 0px;
+    }
+
+    .menu {
+      display: block;
     }
     
 }

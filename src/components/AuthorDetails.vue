@@ -1,7 +1,7 @@
 <template>
     <div class="Author">
         <p id = "name">{{name}}</p>
-        <p><a  href="https://outstanding-pear-bullfrog.cyclic.app/about"> About Me </a></p>
+        <p><a  href="https://hospital-details-by-us-state-tvt.cyclic.app/about"> About Me </a></p>
     </div>
 </template>
 
