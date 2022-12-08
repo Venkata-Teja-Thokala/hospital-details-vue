@@ -2,7 +2,10 @@
   <div>
     <div id="welcome">Welcome to Hospital Details</div>
     <div class="menu">
-        <AuthorDetails :name = "name"></AuthorDetails>
+        <div class = "author">
+          <AuthorDetails :name = "name"></AuthorDetails>
+        </div>
+        <div class="empty"></div>
         <div class="searchItems">
             <p id="errorMessage">{{errorMessage}}</p>
             <div><input v-model="stateCode" placeholder="State Code. ex: CT" />
@@ -93,7 +96,11 @@ import axios from 'axios';
   padding-top: 7px;
   
 }
+.empty{
+  width:50%;
+}
 .menu {
+    width: 100%;
     height: 40px;
     margin-top: 10px;
     display: inline-flex;
@@ -101,6 +108,9 @@ import axios from 'axios';
     margin-bottom: 40px;
 }
 
+.author{
+  min-width : 400px;
+}
 #errorMessage {
     padding-top : 15px;
     color: red;
@@ -110,14 +120,14 @@ button{
   background-color: #f4511e;
   border: none;
   color: white;
-  padding: 16px 32px;
   text-align: center;
   font-size: 16px;
-  margin: 4px 2px;
   opacity: 0.7;
   transition: 0.3s;
   border-radius: 20px;
-  margin-left:10px;
+  margin:10px;
+  height: 50px;
+  width: 200px;
 }
 
 button:hover {
@@ -131,20 +141,18 @@ a{
 }
 input {
     height: 40px;
-    width: 120px;
     border: 2px solid blueviolet;
     border-radius: 10px;
-    background-color: rgb(218, 218, 251);
-    margin-left: 20px;
-    margin-right: 5px;
+    background-color: rgb(233, 233, 249);
     text-align: center;
 }
 
 .searchItems {
-  display: inline-flex;
-  position: absolute;
-  right:0;
+  display: inline-flexbox;
+  align-items: right;
   margin-right: 20px;
+  float: right;
+  min-width: 700px;
 }
 
 #name {
@@ -155,9 +163,11 @@ input {
     margin-right: 40px;
 }
 
-@media only screen and (max-width: 400px) {
+
+
+@media only screen and (max-width: 700px) {
     * {
-        width: 90vw;
+        width: 100%;
         margin: 0px;
         padding: 0px;
     }
@@ -165,6 +175,18 @@ input {
     .menu {
       display: block;
     }
+
+    .searchItems {
+      display: block;
+      width: 70%;
+    }
+
+    .searchItems {
+      align-items: right;
+      margin-right: 20px;
+      float: left;
+      min-width: 200px;
+}
     
 }
 
